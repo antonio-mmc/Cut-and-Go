@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-white antialiased overflow-x-hidden;
+  }
+}
+
+@keyframes slow-spin-reverse {
+  from {
+    transform: rotate(360deg) scale(1.5);
+  }
+
+  to {
+    transform: rotate(0deg) scale(1.5);
+  }
+}
+
+@keyframes scan {
+  0% {
+    top: -20%;
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 120%;
+    opacity: 0;
+  }
+}
+
+.animate-slow-spin-reverse {
+  animation: slow-spin-reverse 60s linear infinite;
+}
+
+.animate-scan {
+  animation: scan 4s ease-in-out infinite;
+}
